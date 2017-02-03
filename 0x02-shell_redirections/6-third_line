@@ -1,0 +1,2 @@
+#!/bin/bash
+head -3 testlines | tail -1

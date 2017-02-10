@@ -12,7 +12,7 @@ int main(void)
 	char lowerLtr = 'a';
 	char upperLtr = 'A';
 
-	while (loweLtr <= 'z')
+	while (lowerLtr <= 'z')
 	{
 		putchar(lowerLtr);
 		lowerLtr++;
@@ -20,7 +20,7 @@ int main(void)
 
 	upperLtr = 'A';
 
-	while (upperLtr <= 'A')
+	while (upperLtr <= 'Z')
 	{
 		putchar(upperLtr);
 		upperLtr++;

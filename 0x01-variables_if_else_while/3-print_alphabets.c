@@ -9,22 +9,21 @@
 
 int main(void)
 {
-	char letter;
+	char lowerLtr = 'a';
+	char upperLtr = 'A';
 
-	letter = 'a';
-
-	while (letter <= 'z')
+	while (loweLtr <= 'z')
 	{
-		putchar(letter);
-		letter++;
+		putchar(lowerLtr);
+		lowerLtr++;
 	}
 
-	letter = 'a';
+	upperLtr = 'A';
 
-	while (letter <= 'z')
+	while (upperLtr <= 'A')
 	{
-		putchar(toupper(letter));
-		letter++;
+		putchar(upperLtr);
+		upperLtr++;
 	}
 
 	putchar('\n');

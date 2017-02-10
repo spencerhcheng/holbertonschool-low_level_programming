@@ -4,14 +4,12 @@
  * main - function prints out
  * letters from a to z using
  * putchar rather than printf
- * return: 0
-*/
+ * Return: 0
+ */
 
 int main(void)
 {
-	char letter;
-
-	letter = 'a';
+	char letter = 'a';
 
 	while (letter <= 'z')
 	{

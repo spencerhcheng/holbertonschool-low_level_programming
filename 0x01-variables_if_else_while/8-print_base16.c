@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - display all numbers of base 16, with
@@ -8,11 +8,8 @@ include <stdio.h>
 
 int main(void)
 {
-	char i;
-	char j;
-
-	i = '0';
-	j = 'a';
+	char i = '0';
+	char j = 'a';
 
 	while (i <= '9')
 	{

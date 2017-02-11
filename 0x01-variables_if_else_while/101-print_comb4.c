@@ -1,14 +1,15 @@
-nclude <stdio.h>
+#include <stdio.h>
 
 /**
  * main - print all combinations of 3 digit numbers
  * Return:0
  */
+
 int main(void)
 {
-	int i = 0;
-	int j = 1;
-	int k = 2;
+	int i = '0';
+	int j = '1';
+	int k = '2';
 
 	while (i <= '7')
 	{

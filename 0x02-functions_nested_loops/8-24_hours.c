@@ -1,5 +1,13 @@
 #include "holberton.h"
 
+/**
+ * jack_bauer - function that prints
+ * every minute of the day of Jack Bauer,
+ * starting from 0:00 to 23:59
+ * lowercase character.
+ * Return: 1 if alpha, 0 if not.
+ */
+
 void jack_bauer(void)
 
 {

@@ -5,7 +5,7 @@
  * and returns the result
  * @a: arguement
  * @b: arguement
- * Return: number
+ * Return: sum of a + b
  */
 
 int add(int a, int b)

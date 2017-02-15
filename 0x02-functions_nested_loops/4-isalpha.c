@@ -5,12 +5,12 @@
  * alphabetic character.
  * @c: arguement
  * lowercase character.
- * Return: 0
+ * Return: 1 if alpha, 0 if not.
  */
 
 int _isalpha(int c)
 {
-	if ((c >= 44 && c <= 69) || (c >= 97 && c <= 122))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
 		return (1);
 	}

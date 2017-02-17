@@ -7,10 +7,8 @@
  */
 int main(void)
 {
-    print_to_98(0);
-    print_to_98(98);
-    print_to_98(111);
-    print_to_98(81);
-    print_to_98(-10);
-    return (0);
+	print_square(2);
+	print_square(10);
+	print_square(0);
+	return (0);
 }

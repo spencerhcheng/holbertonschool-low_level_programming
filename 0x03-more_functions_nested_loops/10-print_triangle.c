@@ -4,7 +4,7 @@
  * print_triangle -  A function that prints a triangle,
  * followed by a new line.
  * size: length of triangle
- * Return: hashtags to print out triangle
+ * Return: nothing
  */
 
 void print_triangle(int size)

@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _isupper: function that returns 1
+ * _isupper- function that returns 1
  * if input character is an uppercase
  * and 0 otherwise
  * @c: input arguement integer

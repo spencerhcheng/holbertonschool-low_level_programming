@@ -3,7 +3,7 @@
 /**
  * print_triangle -  A function that prints a triangle,
  * followed by a new line.
- * size: length of triangle
+ * @size: length of triangle
  * Return: nothing
  */
 

@@ -11,7 +11,7 @@ int main(void)
 {
 	int i;
 	int sum = 0;
-	
+
 
 	while (i < 1024)
 	{
@@ -20,5 +20,5 @@ int main(void)
 		i++;
 	}
 	printf("%d", sum);
-	return (0);	
+	return (0);
 }

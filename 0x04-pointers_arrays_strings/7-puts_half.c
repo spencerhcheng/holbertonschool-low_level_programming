@@ -33,7 +33,7 @@ void puts_half(char *str)
 	{
 		k = j / 2;
 	}
-	else
+	else if (j % 2 != 0)
 	{
 		k = (j - 1) / 2;
 	}

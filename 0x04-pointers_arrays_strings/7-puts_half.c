@@ -25,23 +25,23 @@ int _strlen(char *s)
 
 void puts_half(char *str)
 {
-	int j, even, odd;
+	int j, k;
 
 	j = _strlen(str);
 
 	if (j % 2 == 0)
 	{
-		even = j / 2;
+		k = j / 2;
 	}
 	else
 	{
-		odd = (j + 1) / 2
+		k = (j - 1) / 2;
 	}
 
-	while (str[halfPt] != 0)
+	while (str[k] != 0)
 	{
-		_putchar(str[halfPt]);
-		halfPt++;
+		_putchar(str[k]);
+		k++;
 	}
 		_putchar('\n');
 }

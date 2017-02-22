@@ -10,19 +10,25 @@ int _strlen(char *s)
 {
 	int i = 0;
 
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}
-		return i;
+		return (i);
 }
+
+/**
+ * puts_half - A function that returns the length of a string.
+ * @str: String arguement
+ * Return: nothing
+ */
 
 void puts_half(char *str)
 {
 	int j = _strlen(str);
 	int halfPt = j / 2;
 
-	while(str[halfPt] != 0)
+	while (str[halfPt] != 0)
 	{
 		_putchar(str[halfPt]);
 		halfPt++;

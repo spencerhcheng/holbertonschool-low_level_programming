@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _puts2 - A function that prints a string,
+ * puts2 - A function that prints a string,
  * followed by a new line to standard out
  * @str: string as arguement
  * Return: nothing

@@ -1,7 +1,8 @@
 #include "holberton.h"
 
-/** 
- * _puts - A function that prints a string, followed by a new line to standard out
+/**
+ * _puts - A function that prints a string,
+ * followed by a new line to standard out
  * @str: string as arguement
  * Return: nothing
  */
@@ -16,4 +17,4 @@ void _puts(char *str)
 		i++;
 	}
 		_putchar('\n');
-}	
+}

@@ -25,8 +25,18 @@ int _strlen(char *s)
 
 void puts_half(char *str)
 {
-	int j = _strlen(str);
-	int halfPt = j / 2;
+	int j, even, odd;
+
+	j = _strlen(str);
+
+	if (j % 2 == 0)
+	{
+		even = j / 2;
+	}
+	else
+	{
+		odd = (j + 1) / 2
+	}
 
 	while (str[halfPt] != 0)
 	{

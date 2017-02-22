@@ -30,6 +30,7 @@ void print_rev(char *s)
 	int i;
 
 	i = _strlen(s);
+	i--;
 
 	while (i >= 0)
 	{

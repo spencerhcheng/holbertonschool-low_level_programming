@@ -1,22 +1,24 @@
 #include "holberton.h"
 
+/**
+ * *_strcat - concatenates src to dest
+ * @dest: pointer to string
+ * @src: pointer to string
+ * Return: concatenated string
+ */
+
 char *_strcat(char *dest, char *src)
 {
-	char val;
+	int i, j;
 
-	int i, j = 0;
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+		;
+	}
 
-	while (dest[i] != '\0')
+	for (j = 0; src[j] != '\0'; i++, j++)
 	{
-		val[i] = dest[i];
-		i++;
+		dest[i] = src[j];
 	}
-	
-	while (src[j] != '\0')
-	{
-		val[j] = src[j];
-		i++;
-	}
-	return (val);
+	return (dest);
 }
-		

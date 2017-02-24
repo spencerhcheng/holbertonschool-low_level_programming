@@ -17,7 +17,7 @@ char *cap_string(char *p)
 	{
 		int i = 0;
 
-		while (i <= 13)
+		while (i < 13)
 		{
 			if (p[j] == x[i])
 			{

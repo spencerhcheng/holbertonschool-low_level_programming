@@ -16,6 +16,7 @@ char *cap_string(char *p)
 	while (p[j] != '\0')
 	{
 		int i = 0;
+
 		while (i < 13)
 		{
 			if (p[j] == x[i])

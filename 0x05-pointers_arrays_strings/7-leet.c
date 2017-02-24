@@ -8,10 +8,9 @@
 
 char *leet(char *p)
 {
-
-	char low[] = {'a', 'e', 'o', 't', 'l'};
-	char high[] = {'A', 'E', 'O', 'T', 'L'};
-	char num[] = {'4', '3', '0', '7', '1'};
+	char *low = "aeotl";
+	char *high = "AEOTL";
+	char *num = "43071";
 
 	int x = 0;
 

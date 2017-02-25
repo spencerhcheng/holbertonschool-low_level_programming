@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * *leet - encodes a string into l337 talk
+ * *rot13 - encodes a string into l337 talk
  * @p: pointer to string
  * Return: l337 string
  */

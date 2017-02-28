@@ -27,4 +27,3 @@ int main(void)
     printf("%s", s);
     return (0);
 }
-

@@ -8,7 +8,7 @@
  */
 int my_prime(int i, int n)
 {
-	if (10 % i == 0)
+	if (n  % i == 0)
 	{
 		return (0);
 	}
@@ -17,7 +17,7 @@ int my_prime(int i, int n)
 		return (1);
 	}
 	else
-		return (myprime(i + 1, n));
+		return (my_prime(i + 1, n));
 }
 
 /**
@@ -27,13 +27,15 @@ int my_prime(int i, int n)
  */
 int is_prime_number(int n)
 {
-	int i = 2;
+	int i;
+
+	i = 2;
 
 	if (n <= 1)
 	{
 		return (0);
 	}
-	if (n == 2)
+	else if (n == 2)
 	{
 		return (1);
 	}

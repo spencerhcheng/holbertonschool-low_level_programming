@@ -16,19 +16,32 @@ int main(int argc, char *argv[])
 {
 	int i;
 
+	int sum;
+ 	
+	sum = 0;
+
+if (argc > 0)
+{
 	for (i = 1; i <= argc; i++)
 	{
-		if ((atoi(argv[i]) > 0 && (atoi(argv[i] <= 9))
+	 	if (atoi(argv[i]) > 0 && atoi(argv[i]) <= 2147483647)
 		{
 			sum += atoi(argv[i]);
 		}
-		printf("%d\n", sum);	
-
-		else
-		{
-		printf("error\n");	
-		}
+		//		else
+//		{
+//		printf("error\n");	
+//		}
 	}
+
+	printf("%d\n", sum);	
+
+
+} 
+else
+{
+	printf("%d\n", 0);
+}
 	return (0);
 }
 			 

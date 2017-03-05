@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	sum = 0;
 
-	if (argc > 0)
+	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{

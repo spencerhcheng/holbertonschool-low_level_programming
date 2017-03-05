@@ -22,26 +22,24 @@ int main(int argc, char *argv[])
 
 if (argc > 0)
 {
-	for (i = 1; i <= argc; i++)
+	for (i = 1; i < argc; i++)
 	{
-	 	if (atoi(argv[i]) > 0 && atoi(argv[i]) <= 2147483647)
+	 	if (atoi(argv[i]) > 0 && atoi(argv[i]) <= 2147473647)
 		{
 			sum += atoi(argv[i]);
 		}
-		//		else
-//		{
-//		printf("error\n");	
-//		}
+		else
+		{
+			return (1);	
+		}
 	}
-
-	printf("%d\n", sum);	
-
+		printf("%d\n", sum);	
 
 } 
-else
-{
-	printf("%d\n", 0);
-}
+	else
+	{
+	printf("%d", 0);
+	}
 	return (0);
 }
 			 

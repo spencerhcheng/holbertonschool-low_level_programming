@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/** 
+/**
  * main - function that multiplies two numbers and returns
  * the product followed by a new line. If the program
  * does not receive two arguements, program should print Error
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		product = (atoi(argv[1]) * atoi(argv[2]));
 		printf("%d\n", product);
 	}
-	else 
+	else
 	{
 		printf("Error\n");
 	}

@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("%d", 0);
+		printf("%d\n", 0);
 	}
 		return (0);
 }

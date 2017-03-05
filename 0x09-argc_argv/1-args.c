@@ -5,7 +5,7 @@
  * main - Program that prints the number
  * of arguements passed into it
  * @argc: arguement counter
- * @argc: arguement pointer to string
+ * @argv: arguement pointer to string
  * Return: 0
  */
 

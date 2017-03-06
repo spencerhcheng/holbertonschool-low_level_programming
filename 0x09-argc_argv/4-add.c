@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 				sum += (strtol(argv[x], &endpt, 10));
 			}
 		}
-			printf("%d\n", sum);
+			printf("%ld\n", sum);
 	}
 	else
 	{

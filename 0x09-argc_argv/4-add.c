@@ -15,28 +15,28 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-
+	int x;
 	int sum;
+	char *endpt;
 
 	sum = 0;
 
-	if (argc > 0)
+	if (argc > 1)
 	{
-		for (i = 1; i < argc; i++)
+		for (x = 1; x < argc; x++)
 		{
-			if (atoi(argv[i]) > 0 && atoi(argv[i]) <= 2147483647)
-			{
-				sum += atoi(argv[i]);
-			}
-			else
+			(strtol(argv[x], &endpt, 10));
+			if (*endpt)
 			{
 				printf("Error\n");
 				return (1);
 			}
+			else
+			{
+				sum += (strtol(argv[x], &endpt, 10));
+			}
 		}
 			printf("%d\n", sum);
-
 	}
 	else
 	{

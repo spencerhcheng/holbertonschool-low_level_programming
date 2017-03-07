@@ -18,13 +18,11 @@ int main(int argc, char *argv[])
 	if (argc < 0)
 		printf("0\n");
 
-	else if (argc != 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else
-	{
 		while (newTotal > 0)
 		{
 			if (newTotal >= 25)
@@ -44,7 +42,7 @@ int main(int argc, char *argv[])
 			}
 				count += 1;
 		}
-	}
+
 		printf("%d\n", count);
-	return (0);
+		return (0);
 }

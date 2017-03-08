@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
  * _strdup - function that returns a pointer
@@ -9,7 +11,7 @@
  */
 char *_strdup(char *str)
 {
-	int len, j;
+	int j;
 	char *cpy;
 
 
@@ -18,15 +20,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-
-
-	for (len = 0; str[len] != '\0'; len++)
-	{
-	}
-
-	len = len + 1; /* get string length stored in i */
-
-	cpy = malloc(len * sizeof(*str));
+	cpy = malloc(strlen(str) * sizeof(*str));
 	if (cpy == NULL)
 	{
 		return (NULL);

@@ -12,6 +12,14 @@ char *_strdup(char *str)
 	int len, j;
 	char *cpy;
 
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+
+
 	for (len = 0; str[len] != '\0'; len++)
 	{
 	}
@@ -19,12 +27,6 @@ char *_strdup(char *str)
 	len = len + 1; /* get string length stored in i */
 
 	cpy = malloc(len * sizeof(*str));
-
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-
 	if (cpy == NULL)
 	{
 		return (NULL);

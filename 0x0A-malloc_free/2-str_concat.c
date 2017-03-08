@@ -11,8 +11,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *combo;
-	int i;
-	int j;
+	int len1, len2, i, j;
 	
 	if (s1 == NULL)
 		s1 = "";
@@ -20,7 +19,19 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	combo = malloc((strlen(s1) + strlen(s2)) * sizeof(char));
+	for (len1 = 0; s1[len1] != '\0'; len1++)
+	{
+	}
+	
+	len1 = len1 + 1;
+
+	for (len2 = 0; s2[len2] != '\0'; len2++)
+	{
+	}
+	len2 = len2 + 1;
+	
+
+	combo = malloc((len1 + len2) * sizeof(char));
 
 	if (combo == NULL)
 	{

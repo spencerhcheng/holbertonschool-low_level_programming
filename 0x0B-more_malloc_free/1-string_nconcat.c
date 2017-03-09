@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (len2 >  n)
 		len2 = n;
 
-	combo = malloc((len1 + len2) * sizeof(char));
+	combo = malloc((len1 + len2 + 1) * sizeof(char));
 
 	if (combo == NULL)
 		return (NULL);

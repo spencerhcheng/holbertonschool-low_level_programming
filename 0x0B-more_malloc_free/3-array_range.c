@@ -12,9 +12,6 @@ int *array_range(int min, int max)
 	int *ptr;
 	int length;
 	int i;
-	int j;
-
-	j = 0;
 
 	length = (max - min) + 1;
 
@@ -28,9 +25,9 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	for (i = min; i < max; i++, j++)
+	for (i = 0; min <= max; i++, min++)
 	{
-		ptr[j] = i;
+		ptr[i] = min;
 	}
 	return (ptr);
 }

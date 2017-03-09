@@ -30,8 +30,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 			ptr[i] = nmemb;
 			i++;
 		}
+			return (ptr);
 	}
-	return (ptr);
+
 	else
 	{
 		return (NULL);

@@ -42,5 +42,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		combo[i] = s2[j];
 	}
+	combo[i] = '\0';
 	return (combo);
 }

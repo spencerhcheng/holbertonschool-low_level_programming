@@ -30,6 +30,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 			ptr[i] = nmemb;
 			i++;
 		}
+			ptr[i] = '\0';
 			return (ptr);
 	}
 

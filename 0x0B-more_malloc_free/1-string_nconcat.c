@@ -15,7 +15,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j;
 	unsigned int len1, len2;
 
-
 	if (s1 == NULL)
 		s1 = "";
 
@@ -37,13 +36,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	for (i = 0; s1[i] != '\0'; i++)
-	{
 		combo[i] = s1[i];
-	}
+
 	for (j = 0; j < len2; j++, i++)
-	{
 		combo[i] = s2[j];
-	}
+
 	combo[i] = '\0';
 	return (combo);
 }

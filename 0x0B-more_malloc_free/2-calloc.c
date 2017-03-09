@@ -21,14 +21,14 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	ptr = malloc(nmemb * sizeof(int));
+	ptr = malloc(nmemb * size);
 
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
 
-	while (i <= nmemb)
+	while (i < nmemb)
 	{
 		ptr[i] = 0;
 		i++;

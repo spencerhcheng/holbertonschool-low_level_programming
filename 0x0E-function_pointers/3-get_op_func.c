@@ -24,11 +24,7 @@ int (*get_op_func(char *s))(int, int)
 
 	for (i = 0; i < 5; i++)
 	{
-<<<<<<< HEAD
-		if (strcmp(ops[i].op, s) == 0)
-=======
 		if (ops[i].op[0] == s[0])
->>>>>>> 71bd3e1b7be9b94e25f7f7d2c71a5405d75e4b50
 		{
 			return (ops[i].f);
 		}

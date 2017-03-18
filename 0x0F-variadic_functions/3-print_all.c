@@ -34,13 +34,7 @@ void print_all(const char * const format, ...)
 
 		else if (type == 's')
 		{
-			strTest = va_arg(args, char *);
-			if (strTest != NULL)
-			{
 				printf("%s", strTest);
-			}
-			else
-				printf("(nil)");
 		}
 
 		if ((type == 's' || type == 'c' || type == 'f'

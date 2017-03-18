@@ -36,13 +36,15 @@ void print_all(const char * const format, ...)
 		{
 			strTest = va_arg(args, char *);
 			if (strTest != NULL)
+			{
 				printf("%s", strTest);
+			}
+			else
+				printf("(nil)");
 		}
 
-		if ((type == 's' || type == 'c' ||
-		type == 'f' || type == 'i') &&
-		(format[i + 1] != '\0'))
-
+		if ((type == 's' || type == 'c' || type == 'f'
+		|| type == 'i') && (format[i + 1] != '\0'))
 			printf(", ");
 		i++;
 	}

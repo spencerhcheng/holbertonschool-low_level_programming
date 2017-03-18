@@ -5,34 +5,46 @@
 
 /**
  * print_all - A function that prints anything
- * 
+ * @format: print types
  * Return: nothing
  */
 
 void print_all(const char * const format, ...)
 {
 	va_list args;
+	int i;
+	char type;
+	char *strTest;
+
+	i = 0;
 
 	va_start(args, format);
 
-	while (*format != '\0')
+	while (format != NULL && type != '\0')
 	{
-		if (*format == 's')
-		{
-			printf("%s", va_arg(args, char *));
-		}
-//		else if (*format == 'c')
-//		{
-//			printf("%c", va_arg(args, char));
-		else if (*format == 'f')
-		{
+	type = format[i];
+		if (type == 'c')
+			printf("%c", va_arg(args, int));
+
+		else if (type == 'i')
+			printf("%d", va_arg(args, int));
+
+		else if (type == 'f')
 			printf("%f", va_arg(args, double));
-		}
-		else if (*format == 'i')
+
+		else if (type == 's')
 		{
-			printf("%i", va_arg(args, int));
+			strTest = va_arg(args, char *);
+			if (strTest != NULL)
+				printf("%s", strTest);
 		}
-		*format++;
+
+		if ((type == 's' || type == 'c' ||
+		type == 'f' || type == 'i') &&
+		(format[i + 1] != '\0'))
+
+			printf(", ");
+		i++;
 	}
 	printf("\n");
 	va_end(args);

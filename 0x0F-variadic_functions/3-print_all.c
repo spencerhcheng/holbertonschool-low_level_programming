@@ -9,6 +9,23 @@
  * Return: nothing
  */
 
+void print_char(char *)
+{
+	printf("c", va_arg(args, int));
+}
+
+void print_int()
+{
+	printf("%d, va_args(args, int));
+}
+	
+void print_float
+{
+	printf("%f", va_args(args, double));
+
+void print_string(
+	printf("%s, va_arg));
+
 void print_all(const char * const format, ...)
 {
 	va_list args;
@@ -19,6 +36,16 @@ void print_all(const char * const format, ...)
 	i = 0;
 
 	va_start(args, format);
+
+	argType[] = {
+	{'c', print_char}
+	{'i', print_int}
+	{'f', print_float}
+	{'s', print_string}
+	};
+
+
+
 
 	while (format != NULL && type != '\0')
 	{

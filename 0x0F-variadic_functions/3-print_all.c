@@ -1,33 +1,57 @@
-#include <stdarg.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "variadic_functions.h"
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * print_char - prints char arguement
- * 
+ * func_char - prints char arguement
+ * @separator: argument that adds comma and space
+ * @args: list of args
  * Return: nothing
  */
-void print_char(args)
+void func_char(char *separator, va_list args)
 {
-	printf("%c", va_arg(args, int));
+	printf("%s%c", separator, va_arg(args, int));
 }
+/**
+ * func_int - prints int arguement
+ * @separator: argument that adds comma and space
+ * @args: list of args
+ * Return: nothing
+ */
+void func_int(char *separator, va_list args)
+{
+	printf("%s%i", separator, va_arg(args, int));
+}
+/**
+ * func_float - prints float arguement
+ * @separator: argument that adds comma and space
+ * @args: list of args
+ * Return: nothing
+ */
+void func_float(char *separator, va_list args)
+{
+	printf("%s%f", separator, va_arg(args, double));
+}
+/**
+ * func_string - prints char arguement
+ * @separator: argument that adds comma and space
+ * @args: list of args
+ * Return: nothing
+ */
+void func_string(char *separator, va_list args)
+{
+	char *f;
 
-void print_int(args)
-{
-	printf("%d", va_args(args, int));
-}
+	f = va_arg(args, char *);
 
-void print_float(args)
-{
-	printf("%f", va_args(args, double));
+	if (f == NULL)
+	{
+		printf("(nil)");
+	}
+	printf("%s%s", separator, f);
 }
-void print_string(args)
-{
-	printf("%s", va_arg(args, char *));
-}
-
 
 /**
  * print_all - A function that prints anything
@@ -37,27 +61,35 @@ void print_string(args)
 
 void print_all(const char * const format, ...)
 {
+	int i, j;
 	va_list args;
-	int i;
-	char *strTest;
+	char *separator;
 
-	i = 0;
+	separator = "";
 
-	va_start(args, format);
-
-	argType[] = {
-	{'c', print_char}
-	{'i', print_int}
-	{'f', print_float}
-	{'s', print_string}
+	prints prints_t[] = {
+	{"c", func_char},
+	{"i", func_int},
+	{"f", func_float},
+	{"s", func_string},
+	{NULL, NULL}
 	};
 
-	while (format != NULL && type != '\0')
+	va_start(args, format);
+	i = 0;
+	while (format != NULL && format[i] != '\0')
 	{
-		if (format[i] == argType.variad)
+		j = 0;
+		while (prints_t[j].type != NULL)
 		{
-			return(argType.f);
+			if (prints_t[j].type[0] == format[i])
+			{
+				prints_t[j].f(separator, args);
+				separator = ", ";
+			}
+			j++;
 		}
+		i++;
 	}
 	printf("\n");
 	va_end(args);

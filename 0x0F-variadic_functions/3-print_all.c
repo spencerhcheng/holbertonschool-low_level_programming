@@ -61,12 +61,6 @@ void func_string(char *separator, va_list args)
 
 void print_all(const char * const format, ...)
 {
-	int i, j;
-	va_list args;
-	char *separator;
-
-	separator = "";
-
 	prints prints_t[] = {
 	{"c", func_char},
 	{"i", func_int},
@@ -74,6 +68,13 @@ void print_all(const char * const format, ...)
 	{"s", func_string},
 	{NULL, NULL}
 	};
+
+
+	int i, j;
+	va_list args;
+	char *separator;
+
+	separator = "";
 
 	va_start(args, format);
 	i = 0;

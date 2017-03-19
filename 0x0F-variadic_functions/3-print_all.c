@@ -2,6 +2,32 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "variadic_functions.h"
+
+/**
+ * print_char - prints char arguement
+ * 
+ * Return: nothing
+ */
+void print_char(args)
+{
+	printf("%c", va_arg(args, int));
+}
+
+void print_int(args)
+{
+	printf("%d", va_args(args, int));
+}
+
+void print_float(args)
+{
+	printf("%f", va_args(args, double));
+}
+void print_string(args)
+{
+	printf("%s", va_arg(args, char *));
+}
+
 
 /**
  * print_all - A function that prints anything
@@ -9,28 +35,10 @@
  * Return: nothing
  */
 
-void print_char(char *)
-{
-	printf("c", va_arg(args, int));
-}
-
-void print_int()
-{
-	printf("%d, va_args(args, int));
-}
-	
-void print_float
-{
-	printf("%f", va_args(args, double));
-
-void print_string(
-	printf("%s, va_arg));
-
 void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i;
-	char type;
 	char *strTest;
 
 	i = 0;
@@ -44,30 +52,12 @@ void print_all(const char * const format, ...)
 	{'s', print_string}
 	};
 
-
-
-
 	while (format != NULL && type != '\0')
 	{
-	type = format[i];
-		if (type == 'c')
-			printf("%c", va_arg(args, int));
-
-		else if (type == 'i')
-			printf("%d", va_arg(args, int));
-
-		else if (type == 'f')
-			printf("%f", va_arg(args, double));
-
-		else if (type == 's')
+		if (format[i] == argType.variad)
 		{
-				printf("%s", strTest);
+			return(argType.f);
 		}
-
-		if ((type == 's' || type == 'c' || type == 'f'
-		|| type == 'i') && (format[i + 1] != '\0'))
-			printf(", ");
-		i++;
 	}
 	printf("\n");
 	va_end(args);

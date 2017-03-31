@@ -2,6 +2,12 @@
 #include "holberton.h"
 #include <stdlib.h>
 
+/**
+ * print_binary - function that prints
+ * the binary representation of a number
+ * @n: number
+ * Return: nothing
+ */
 void print_binary(unsigned long int n)
 {
 	unsigned long int y, i;
@@ -13,7 +19,7 @@ void print_binary(unsigned long int n)
 		y = (y >> 1);
 
 		if (n != y) /* left most 1 */
-		{	
+		{
 			is_leading_zero = 0;
 			_putchar('1');
 		}

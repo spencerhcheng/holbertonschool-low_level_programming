@@ -1,6 +1,19 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * _atoi - function that converts char to int
+ * @b : pointer to string
+ * Return: int
+ */
+
+unsigned int _atoi(const char b)
+{
+	unsigned int result;
+
+	result = ((unsigned int)b - '0');
+	return (result);
+}
 
 /**
  * binary_to_uint - a function that ocnverts a binary number
@@ -9,7 +22,6 @@
  * Return: converted number or 0 if there is one or more chars
  * in the string that is neither 0 nor 1
  */
-
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int sum = 0;
@@ -28,7 +40,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-		convNum = atoi(b);
+		convNum = _atoi(b[i]);
 		sum += (convNum * power);
 		power = power * 2;
 	}

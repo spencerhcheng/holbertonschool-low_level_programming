@@ -10,7 +10,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int y, i;
+	unsigned long int y;
+	unsigned int i;
 	char zero = 1;
 
 	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)

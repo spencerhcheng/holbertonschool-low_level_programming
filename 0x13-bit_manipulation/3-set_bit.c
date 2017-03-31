@@ -10,16 +10,16 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int x = 1;
+	unsigned long int power = 1;
 
 	if (index > (8 * sizeof(long int)))
 		return (-1);
 
 	for (index = index; index > 0; index--)
 	{
-		x = x * 2;
+		power = power * 2;
 	}
 
-	*n = *n + x;
+	*n = *n + power;
 	return (1);
 }

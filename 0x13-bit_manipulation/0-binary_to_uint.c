@@ -12,18 +12,25 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int len, i, dec;
-
-	dec = 0;
+	unsigned int sum = 0;
+	unsigned int power = 1;
+	int len, i, convNum;
+	
+	if (b == NULL)
+		return (0);
 
 	for (len = 0; b[len] != '\0'; len++)
 		;
-	
-	for (i = (len - 1); i <= 0; i--)
+
+	for (i = (len - 1); i >= 0; i--)
 	{
-		dec = dec << 1;
-		if (b[i] == '1')
-			dec += 1;
+		if ((b[i] != '0' && b[i] != '1'))
+		{
+			return (0);
+		}
+		convNum = atoi(b);
+		sum += (convNum * power);
+		power = power * 2;
 	}
-	return (dec);
+	return (sum);
 }

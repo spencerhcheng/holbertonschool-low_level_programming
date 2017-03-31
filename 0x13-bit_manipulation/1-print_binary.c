@@ -6,6 +6,7 @@
  * @n: number
  * Return: nothing
  */
+
 void print_binary(unsigned long int n)
 {
 	unsigned long int y;
@@ -16,7 +17,6 @@ void print_binary(unsigned long int n)
 	{
 		y = (n << 1);
 		y = (y >> 1);
-
 		if (n != y) /* left most 1 */
 		{
 			zero = 0;

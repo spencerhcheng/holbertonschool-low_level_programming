@@ -1,10 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <sys/types.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stddef.h>
+
 /**
  * read_textfile - a function that reads
  * a text file and prints it to the POSIX
@@ -17,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_descript;
 	char *buff;
-	int i, read_result, write_result, num_letters, close_result;
+	ssize_t i, read_result, write_result, num_letters, close_result;
 
 	if (filename == NULL)
 		return (0);

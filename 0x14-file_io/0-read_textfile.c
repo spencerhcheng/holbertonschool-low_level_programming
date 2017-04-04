@@ -29,14 +29,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (read_result == -1)
 		return (0);
 
-	write_result = write(STDOUT_FILENO, buff, read_result);
-
-	if (write_result == -1)
-		return (0);
-
 	close_result = close(file_descript);
 
 	if (close_result == -1)
+		return (0);
+
+	write_result = write(STDOUT_FILENO, buff, read_result);
+
+	if (write_result == -1)
 		return (0);
 
 	for (num_letters = 0; buff[num_letters] != '\0'; num_letters++)

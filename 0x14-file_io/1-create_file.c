@@ -9,30 +9,31 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, cd, wd, count;
+	int fd, wd, count;
 
 	if (filename == NULL)
 		return (-1);
 
 	else
 	{
-		fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+		fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
 		if (fd == -1)
 			return (-1);
 	}
 
-	for (count = 0; text_content[count] != '\0'; count++)
+	for (count = 0; text_content[count]; count++)
 		;
 
-	wd = write(fd, filename, count);
+	if (text_content != NULL)
+		wd = write(fd, text_content, count);
+
+	if (text_content == NULL)
+		wd = write(fd, '\0', count);
+
+	close(fd);
 
 	if (wd == -1)
-		return (-1);
-
-	cd = close(fd);
-
-	if (cd == -1)
 		return (-1);
 
 	return (1);

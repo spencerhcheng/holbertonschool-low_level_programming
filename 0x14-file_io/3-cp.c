@@ -31,12 +31,9 @@ int main(int argc, char *argv[])
 		fd_read = read(fd_from, buff, sizeof(buff));
 		if (fd_read == -1)
 			dprintf(STDERR_FILENO, "Can't read from file %s\n", argv[1]), exit(98);
-		if (fd_read > 0)
-		{
 			write_to = write(fd_to, buff, fd_read);
-			if (write_to == -1)
-				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-		}
+		if (write_to == -1)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 
 	close_from = close(fd_from);

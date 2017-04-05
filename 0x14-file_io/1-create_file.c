@@ -25,11 +25,7 @@ int create_file(const char *filename, char *text_content)
 	for (count = 0; text_content[count]; count++)
 		;
 
-	if (text_content != NULL)
-		wd = write(fd, text_content, count);
-
-	if (text_content == 0)
-		wd = write(fd, 0, count);
+	wd = write(fd, text_content, count);
 
 	close(fd);
 

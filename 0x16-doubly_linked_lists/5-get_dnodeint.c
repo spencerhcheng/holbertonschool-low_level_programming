@@ -23,7 +23,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		i++;
 	}
 
-	if (index > i)
+	if (index >= i)
 		return (NULL);
 
 	while (j < index)

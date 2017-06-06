@@ -12,6 +12,9 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int last = 0;
 	hash_node_t *temp;
 
+	if (!ht)
+		return;
+
 	while (i < ht->size)
 	{
 		temp = ht->array[i];

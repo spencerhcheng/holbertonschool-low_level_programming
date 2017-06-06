@@ -22,18 +22,17 @@ void hash_table_print(const hash_table_t *ht)
 		}
 		i++;
 	}
-	printf("%lu\n", last);	
 
 	putchar('{');
-	i= 0;
+	i = 0;
 	while (i < ht->size)
 	{
 		temp = ht->array[i];
 
 		while (temp != NULL)
-		{	
+		{
 			printf("'%s': '%s'", temp->key, temp->value);
-			if (i != last)	
+			if (i != last)
 				printf(", ");
 			temp = temp->next;
 		}

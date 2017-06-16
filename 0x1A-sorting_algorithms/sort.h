@@ -4,8 +4,9 @@
 #include <stdlib.h>
 /**
  * struct listint_s - Doubly linked list node
- *
  * @n: Integer stored in the node
+ * @prev: pointer to previous node
+ * @next: pointer to next node
  * @next: Pointer to the next element of the list
  */
 typedef struct listint_s

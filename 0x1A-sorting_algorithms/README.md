@@ -19,7 +19,7 @@ Sorting algorithms explored:
 
 Ekaterina Kalache: [github account](https://github.com/KatyaKalache), [twitter](https://twitter.com/KatyaKalache)
 
-Spencer Cheng: [[github account](https://github.com/spencerhcheng), [twitter](https://twitter.com/spencerhcheng)
+Spencer Cheng: [github account](https://github.com/spencerhcheng), [twitter](https://twitter.com/spencerhcheng)
 
 
 
@@ -105,7 +105,9 @@ void print_list(const listint_t *list)
 #### 0. Bubble sort
 Function that sorts an array of integers in ascending order using the `Bubble sort` algorithm. The `list` is printed after each time an element is swapped.
 
-Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list. Although the algorithm is simple, it is too slow and impractical for most problems even when compared to insertion sort. It can be practical if the input is usually in sorted order but may occasionally have some out-of-order elements nearly in position. [source: Wikipedia]
+Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list. Although the algorithm is simple, it is too slow and impractical for most problems even when compared to insertion sort. It can be practical if the input is usually in sorted order but may occasionally have some out-of-order elements nearly in position.
+
+[source: Wikipedia]
 
 Expected output:
 ```
@@ -153,6 +155,7 @@ Simple implementation: Jon Bentley shows a three-line C version, and a five-line
 * In-place; i.e., only requires a constant amount O(1) of additional memory space
 * Online; i.e., can sort a list as it receives it
 * When people manually sort cards in a bridge hand, most use a method that is similar to insertion sort.
+
 [source: Wikipedia]
 
 Expected output:
@@ -192,6 +195,7 @@ Big O notation: `1-0`
 Function that sorts an array of integers in ascending order using the `quick sort` algorithm. The `list` is printed each time an element is swapped.
 
 The selection sort algorithm divides the input list into two parts: the sublist of items already sorted, which is built up from left to right at the front (left) of the list, and the sublist of items remaining to be sorted that occupy the rest of the list. Initially, the sorted sublist is empty and the unsorted sublist is the entire input list. The algorithm proceeds by finding the smallest (or largest, depending on sorting order) element in the unsorted sublist, exchanging (swapping) it with the leftmost unsorted element (putting it in sorted order), and moving the sublist boundaries one element to the right.
+
 [source: Wikipedia]
 
 Expected output:
@@ -221,6 +225,7 @@ uicksort (sometimes called partition-exchange sort) is an efficient sorting algo
 Quicksort is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation (formally, a total order) is defined. In efficient implementations it is not a stable sort, meaning that the relative order of equal sort items is not preserved. Quicksort can operate in-place on an array, requiring small additional amounts of memory to perform the sorting.
 
 Mathematical analysis of quicksort shows that, on average, the algorithm takes O(n log n) comparisons to sort n items. In the worst case, it makes O(n2) comparisons, though this behavior is rare.
+
 [source: Wikipedia]
 
 ```

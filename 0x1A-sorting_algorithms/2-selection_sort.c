@@ -10,9 +10,8 @@
 
 void selection_sort(int *array, size_t size)
 {
-	size_t i = 0, x = 0, swap_index = 0, start = 0;
-	size_t min = array[0];
-	short int flag = 0;
+	size_t i = 0, x = 0, swap_index = 0;
+	int min = array[0];
 
 	while (array && size > 1 && x < size - 1)
 	{

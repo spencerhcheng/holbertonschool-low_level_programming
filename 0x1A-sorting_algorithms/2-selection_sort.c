@@ -10,26 +10,28 @@
 
 void selection_sort(int *array, size_t size)
 {
-	size_t i;
-	short int swap_flag;
+	size_t i = 0, x = 0, swap_index = 0, start = 0;
 	size_t min = array[0];
-	size_t temp;
-	while (array && size > 1 && swap_flag != 2)
+	short int flag = 0;
+
+	while (array && size > 1 && x < size - 1)
 	{
-		i = 0;
-		swap_flag = 0;
-		while (i < size - 1)
+		i = x;
+		min = array[x];
+		while (i < size)
 		{
-			temp = array[i];
 			if (array[i] < min)
 			{
-				swap_flag = 1;
-
-			min = array[i];
-				print_array(array, size);
+				min = array[i];
+				swap_index = i;
 			}
 			i++;
 		}
+		array[swap_index] = array[x];
+		array[x] = min;
+		print_array(array, size);
+
+		i = 0;
+		x = x + 1;
 	}
 }
-

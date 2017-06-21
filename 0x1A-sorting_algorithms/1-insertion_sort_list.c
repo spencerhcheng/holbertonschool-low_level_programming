@@ -12,10 +12,11 @@
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *prev_node, *current_node;
+	short int swap_flag;
 
 	prev_node = *list;
 	current_node = prev_node->next;
-	short int swap_flag = 0;
+	swap_flag = 0;
 
 	while (current_node != NULL)
 	{

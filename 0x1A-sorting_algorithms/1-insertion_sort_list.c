@@ -25,29 +25,27 @@ void insertion_sort_list(listint_t **list)
 			current_node = prev_node->next;
 		}
 		swap_flag = 0;
-		while (current_node->prev != NULL && (prev_node->n > current_node->n))
+		while ((current_node->prev != NULL) && (prev_node->n > current_node->n))
 		{
-				swap_flag = 1;
-
-				if (prev_node->prev != NULL)
-				{
-					prev_node->prev->next = current_node;
-				}
+			swap_flag = 1;
+			if (prev_node->prev != NULL)
+				prev_node->prev->next = current_node;
 				prev_node->next = current_node->next;
 				current_node->prev = prev_node->prev;
-				if (current_node->next != NULL)
-					current_node->next->prev = prev_node;
+			if (current_node->next != NULL)
+				current_node->next->prev = prev_node;
 				prev_node->prev = current_node;
 				current_node->next = prev_node;
-				if (current_node->prev == NULL)
-				{
-					*list = current_node;
-					break;
-				}
+			if (current_node->prev == NULL)
+			{
+				*list = current_node;
+				break;
+			}
 			print_list(*list);
 			prev_node = current_node->prev;
 		}
 		current_node = current_node->next;
 		prev_node = prev_node->next;
 	}
+
 }

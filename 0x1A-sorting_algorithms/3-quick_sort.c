@@ -10,12 +10,15 @@ void quick_sort(int *array, size_t size)
 {
 	int high = ((int)size - 1);
 	int low = 0;
+
 	super_quick_sort(array, low, high, size);
 }
 /**
  * super_quick_sort - calling soritng function recursively
  * @array: array to sort
  * @size: size of the array
+ * @low: first index
+ * @high: pivot index
  * Return: void
  */
 void super_quick_sort(int *array, int low, int high, size_t size)
@@ -33,9 +36,11 @@ void super_quick_sort(int *array, int low, int high, size_t size)
  * partition - sets pivot point and sort the list accordingly
  * @array: array to sort
  * @size: size of the array
+ * @low: fisrt position
+ * @high: pivot point
  * Return: pivot point position
  */
-int partition (int *array, int low, int high, size_t size)
+int partition(int *array, int low, int high, size_t size)
 {
 	int pivot = array[high];
 	int i = (low - 1), j, retval, temp;

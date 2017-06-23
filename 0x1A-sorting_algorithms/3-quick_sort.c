@@ -23,7 +23,6 @@ void super_quick_sort(int *array, int low, int high, size_t size)
 		super_quick_sort(array, low, partition_index - 1, size);
 		super_quick_sort(array, partition_index + 1, high, size);
 	}
-
 }
 
 int partition (int *array, int low, int high, size_t size)

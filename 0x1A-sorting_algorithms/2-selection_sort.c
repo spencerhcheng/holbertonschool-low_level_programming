@@ -11,10 +11,13 @@
 void selection_sort(int *array, size_t size)
 {
 	size_t i = 0, x = 0, swap_index = 0;
-	int min = array[0];
+	int min;
 
-	if (!array || size < 1)
+	if (!array || size < 2)
 		return;
+
+	min = array[0];
+
 	while (array && size > 1 && x < size - 1)
 	{
 		i = x;

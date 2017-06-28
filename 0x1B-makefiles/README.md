@@ -3,6 +3,9 @@
 #### Synopsis
 The objective of this project is to understand Makefiles and when, why and how to use them. What the rules of Makefiles are and how to set them. What are explicit and implicit rules and which are the most common/useful.
 
+#### About Makefiles
+Makefiles are a simple way to organize code compilation. Most often, the makefile directs make on how to compile and link a program. Using C/C++ as an example, when a C/C++ source file is changed, it must be recompiled. If a header file has changed, each C/C++ source file that includes the header file must be recompiled to be safe. Each compilation produces an object file corresponding to the source file. Finally, if any source file has been recompiled, all the object files, whether newly made or saved from previous compilations, must be linked together to produce the new executable program.[1] These instructions with their dependencies are specified in a makefile. If none of the files that are prerequisites have been changed since the last time the program was compiled, no actions take place. For large software projects, using Makefiles can substantially reduce build times if only a few source files have changed.
+
 #### Author
 Spencer Cheng: [github account](https://github.com/spencerhcheng), [twitter](https://twitter.com/spencerhcheng)
 

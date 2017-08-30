@@ -11,58 +11,39 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t low = 0, mid, high = size;
-	short int flag_first_call = 0, flag_left = 0, flag_is_zero = 0;
+	size_t low = 0, mid, high = size - 1;
 
-	if (array == NULL)
+
+	if (array == NULL || size < 1)
 		return (-1);
 
 	if (high == 1)
 		return (array[low]);
 
-	high = size - 1;
 	while (high >= low)
 	{
-		if (flag_first_call == 0)
-			print_nums(array, low, high - 1);
-		else
-		{
-			if (low == 0)
-			{
-				flag_is_zero = 1;	
-				low++;
-			}
-			if (flag_left == 1)
-				print_nums(array, low - 1, high);
-			if (flag_left != 1)
-			{
-				print_nums(array, low - 1, high - 1);
-				flag_left = 0;
-			}
-			if (flag_is_zero == 1)
-			{
-				flag_is_zero = 0;
-				low--;
-			}
-		}
-		flag_first_call = 1;
+		if (low == 0 && high == 0}
+			return (-1);
+		print_nums(array, low, high);
 		mid = ((high + low) / 2);
 		if (array[mid] == value)
-		{
 			return (array[mid]);
-		}
 
 		else if (array[mid] < value)
 			low = mid + 1;
 		else if (array[mid] > value)
-		{
-			flag_left = 1;
-			high = mid - 1;
-		}
+			high = mid;
 	}
 		return (-1);
 }
 
+/**
+ * print_nums - prints out current array of numbers
+ * @array: array of numbers to search through
+ * @low: lower bound index value of array
+ * @high: upper bound index value of array
+ * Return: void
+ */
 void print_nums(int *array, size_t low, size_t high)
 {
 	printf("Searching in array: ");
@@ -72,4 +53,4 @@ void print_nums(int *array, size_t low, size_t high)
 		low++;
 	}
 	printf("%d\n", array[high]);
-} 
+}

@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 void print_nums(int *array, size_t low, size_t high);
-void print_val(size_t pos, int value);
+void print_val(size_t pos, int value, size_t size);
 int linear_search(int *array, size_t size, int value);
 int binary_search(int *array, size_t size, int value);
 int jump_search(int *array, size_t size, int value);

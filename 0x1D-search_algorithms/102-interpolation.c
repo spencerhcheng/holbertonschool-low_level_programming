@@ -45,7 +45,7 @@ int interpolation_search(int *array, size_t size, int value)
  * print_val - prints position and value when
  * comparison made
  * @pos: probe position
- * @value: value to search
+ * @array: array of nums
  * @size: size of array
  * Return: void
  */
